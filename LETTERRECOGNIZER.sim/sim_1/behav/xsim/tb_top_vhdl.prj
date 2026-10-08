@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../LETTERRECOGNIZER.srcs/sources_1/new/ascii_rom.vhd" \
+"../../../../LETTERRECOGNIZER.srcs/sources_1/new/delay_module.vhd" \
+"../../../../LETTERRECOGNIZER.srcs/sources_1/new/mlp_weights.vhd" \
+"../../../../LETTERRECOGNIZER.srcs/sources_1/new/mlp.vhd" \
+"../../../../LETTERRECOGNIZER.srcs/sources_1/new/oled_counter.vhd" \
+"../../../../LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd" \
+"../../../../LETTERRECOGNIZER.srcs/sources_1/new/spi_controller.vhd" \
+"../../../../LETTERRECOGNIZER.srcs/sources_1/new/uart_rx.vhd" \
+"../../../../LETTERRECOGNIZER.srcs/sources_1/new/uart_tx.vhd" \
+"../../../../LETTERRECOGNIZER.srcs/sources_1/new/top.vhd" \
+"../../../../LETTERRECOGNIZER.srcs/sim_1/new/tb_top.vhd" \
+
+# Do not sort compile order
+nosort
