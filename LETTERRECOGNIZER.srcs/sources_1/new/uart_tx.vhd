@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity uart_tx is
     generic (
-        CLK_FREQ : integer := 100_000_000;
+        CLK_FREQ : integer := 25_000_000;
         BAUD_RATE : integer := 115200
     );
     port (
@@ -19,7 +19,6 @@ end uart_tx;
 
 architecture Behavioral of uart_tx is
     constant BIT_PERIOD : integer := CLK_FREQ / BAUD_RATE;
-    -- RINOMINATO START -> START_ST PER EVITARE CONFLITTO CON LA PORTA "start"
     type state_t is (IDLE, START_ST, DATA, STOP);
     signal state : state_t := IDLE;
     signal bit_cnt : integer range 0 to 7 := 0;

@@ -1,55 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="robin" Host="PCBOBIN" Pid="29476" HostCore="20" HostMemory="016788566016">
+    <Process Command="vivado.bat" Owner="robin" Host="PCBOBIN" Pid="33760" HostCore="20" HostMemory="016788566016">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="robin" Host="PCBOBIN" Pid="512" HostCore="20" HostMemory="016788566016">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="robin" Host="PCBOBIN" Pid="28544" HostCore="20" HostMemory="016788566016">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="robin" Host="PCBOBIN" Pid="15712" HostCore="20" HostMemory="016788566016">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="robin" Host="PCBOBIN" Pid="7128" HostCore="20" HostMemory="016788566016">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="robin" Host="PCBOBIN" Pid="6872" HostCore="20" HostMemory="016788566016">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="robin" Host="PCBOBIN" Pid="35316" HostCore="20" HostMemory="016788566016">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="robin" Host="PCBOBIN" Pid="35296" HostCore="20" HostMemory="016788566016">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="robin" Host="PCBOBIN" Pid="10664" HostCore="20" HostMemory="016788566016">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="robin" Host="PCBOBIN" Pid="35804" HostCore="20" HostMemory="016788566016">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="robin" Host="PCBOBIN" Pid="34668" HostCore="20" HostMemory="016788566016">
+    <Process Command="vivado.bat" Owner="robin" Host="PCBOBIN" Pid="29776" HostCore="20" HostMemory="016788566016">
     </Process>
 </ProcessHandle>

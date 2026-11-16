@@ -922,7 +922,7 @@ import "DPI-C" function void ps7_simulate_single_cycle_FCLK_CLK0();
      FCLK_CLK0 = 1'b0;
   end
 
-  always #(5.0) FCLK_CLK0 <= ~FCLK_CLK0;
+  always #(20.0) FCLK_CLK0 <= ~FCLK_CLK0;
 
   always@(posedge FCLK_CLK0)
   begin

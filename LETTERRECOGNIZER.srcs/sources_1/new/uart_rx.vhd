@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity uart_rx is
     generic (
         CLK_FREQ : integer := 100_000_000;
-        BAUD_RATE : integer := 115200
+        BAUD_RATE : integer := 115200        
     );
     port (
         clk       : in  std_logic;
@@ -18,6 +18,7 @@ end uart_rx;
 
 architecture Behavioral of uart_rx is
     constant BIT_PERIOD : integer := CLK_FREQ / BAUD_RATE;
+    constant HALF_BIT   : integer := BIT_PERIOD / 2;
     type state_t is (IDLE, START, DATA, STOP);
     signal state : state_t := IDLE;
     signal bit_cnt : integer range 0 to 7 := 0;
@@ -48,7 +49,7 @@ begin
                         clk_cnt <= 0;
                     end if;
                 when START =>
-                    if clk_cnt = BIT_PERIOD/2 then
+                    if clk_cnt = HALF_BIT then
                         if rx_sync(1) = '0' then
                             state <= DATA;
                             clk_cnt <= 0;
@@ -60,7 +61,7 @@ begin
                         clk_cnt <= clk_cnt + 1;
                     end if;
                 when DATA =>
-                    if clk_cnt = BIT_PERIOD-1 then
+                    if clk_cnt = BIT_PERIOD - 1 then
                         clk_cnt <= 0;
                         rx_shift(bit_cnt) <= rx_sync(1);
                         if bit_cnt = 7 then
@@ -72,7 +73,7 @@ begin
                         clk_cnt <= clk_cnt + 1;
                     end if;
                 when STOP =>
-                    if clk_cnt = BIT_PERIOD-1 then
+                    if clk_cnt = BIT_PERIOD - 1 then
                         state <= IDLE;
                         data_out <= rx_shift;
                         data_valid <= '1';

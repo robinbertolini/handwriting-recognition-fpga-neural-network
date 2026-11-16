@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2025.2
-| Date         : Mon Oct  5 19:09:05 2026
+| Date         : Mon Oct 26 14:33:23 2026
 | Host         : PcBobin
 | Design       : design_1
 | Device       : xc7z020-clg484-1--

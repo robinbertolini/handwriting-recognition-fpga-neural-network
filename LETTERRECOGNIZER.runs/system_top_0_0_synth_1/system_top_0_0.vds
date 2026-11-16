@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon Oct  5 19:04:34 2026
-# Process ID         : 23492
+# Start of session at: Wed Oct 14 17:41:21 2026
+# Process ID         : 26080
 # Current directory  : C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/system_top_0_0_synth_1
 # Command line       : vivado.exe -log system_top_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_top_0_0.tcl
 # Log file           : C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/system_top_0_0_synth_1/system_top_0_0.vds
@@ -17,13 +17,12 @@
 # CPU Physical cores : 14
 # CPU Logical cores  : 20
 # Host memory        : 16788 MB
-# Swap memory        : 13621 MB
-# Total Virtual      : 30409 MB
-# Available Virtual  : 4734 MB
+# Swap memory        : 21601 MB
+# Total Virtual      : 38390 MB
+# Available Virtual  : 5775 MB
 #-----------------------------------------------------------
-ERROR: [Common 17-1257] Failed to create directory 'C'.
 source system_top_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 597.688 ; gain = 222.941
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 594.770 ; gain = 219.008
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
@@ -36,11 +35,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 34652
+INFO: [Synth 8-7075] Helper process launched with PID 39960
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1382.223 ; gain = 539.746
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1378.688 ; gain = 540.262
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-9112] actual for formal port 'reset' is neither a static name nor a globally static expression [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/top.vhd:77]
+WARNING: [Synth 8-9112] actual for formal port 'reset' is neither a static name nor a globally static expression [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/top.vhd:74]
 INFO: [Synth 8-638] synthesizing module 'system_top_0_0' [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/ip/system_top_0_0/synth/system_top_0_0.vhd:71]
 INFO: [Synth 8-3491] module 'top' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/top.vhd:5' bound to instance 'U0' of component 'top' [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/ip/system_top_0_0/synth/system_top_0_0.vhd:106]
 INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/top.vhd:20]
@@ -50,71 +49,73 @@ INFO: [Synth 8-638] synthesizing module 'uart_tx' [C:/Users/robin/Documents/GitH
 INFO: [Synth 8-256] done synthesizing module 'uart_tx' (0#1) [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/uart_tx.vhd:20]
 INFO: [Synth 8-638] synthesizing module 'mlp' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/mlp.vhd:18]
 INFO: [Synth 8-256] done synthesizing module 'mlp' (0#1) [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/mlp.vhd:18]
-INFO: [Synth 8-638] synthesizing module 'oled_driver' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:20]
-INFO: [Synth 8-3491] module 'spi_controller' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/spi_controller.vhd:5' bound to instance 'spi_control_inst' of component 'spi_controller' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'oled_driver' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:58]
+INFO: [Synth 8-3491] module 'spi_controller' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/spi_controller.vhd:5' bound to instance 'spi_control_inst' of component 'spi_controller' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:169]
 INFO: [Synth 8-638] synthesizing module 'spi_controller' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/spi_controller.vhd:18]
 INFO: [Synth 8-226] default block is never used [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/spi_controller.vhd:68]
 INFO: [Synth 8-256] done synthesizing module 'spi_controller' (0#1) [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/spi_controller.vhd:18]
-INFO: [Synth 8-3491] module 'delay_module' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/delay_module.vhd:5' bound to instance 'delay_module_inst' of component 'delay_module' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:101]
+INFO: [Synth 8-3491] module 'delay_module' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/delay_module.vhd:5' bound to instance 'delay_module_inst' of component 'delay_module' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:180]
 INFO: [Synth 8-638] synthesizing module 'delay_module' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/delay_module.vhd:19]
 INFO: [Synth 8-256] done synthesizing module 'delay_module' (0#1) [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/delay_module.vhd:19]
 	Parameter SIZE bound to: 4 - type: integer 
 	Parameter TERMINAL bound to: 15 - type: integer 
-INFO: [Synth 8-3491] module 'oled_counter' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_counter.vhd:5' bound to instance 'char_counter_inst' of component 'oled_counter' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:106]
+INFO: [Synth 8-3491] module 'oled_counter' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_counter.vhd:5' bound to instance 'char_counter_inst' of component 'oled_counter' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:189]
 INFO: [Synth 8-638] synthesizing module 'oled_counter' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_counter.vhd:28]
 INFO: [Synth 8-256] done synthesizing module 'oled_counter' (0#1) [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_counter.vhd:28]
 	Parameter SIZE bound to: 3 - type: integer 
 	Parameter TERMINAL bound to: 7 - type: integer 
-INFO: [Synth 8-3491] module 'oled_counter' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_counter.vhd:5' bound to instance 'col_counter_inst' of component 'oled_counter' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:113]
+INFO: [Synth 8-3491] module 'oled_counter' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_counter.vhd:5' bound to instance 'col_counter_inst' of component 'oled_counter' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:201]
 INFO: [Synth 8-638] synthesizing module 'oled_counter__parameterized1' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_counter.vhd:28]
 INFO: [Synth 8-256] done synthesizing module 'oled_counter__parameterized1' (0#1) [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_counter.vhd:28]
-INFO: [Synth 8-3491] module 'ascii_rom' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/ascii_rom.vhd:5' bound to instance 'ascii_rom_inst' of component 'ascii_rom' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:121]
+INFO: [Synth 8-3491] module 'ascii_rom' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/ascii_rom.vhd:5' bound to instance 'ascii_rom_inst' of component 'ascii_rom' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:228]
 INFO: [Synth 8-638] synthesizing module 'ascii_rom' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/ascii_rom.vhd:12]
 INFO: [Synth 8-256] done synthesizing module 'ascii_rom' (0#1) [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/ascii_rom.vhd:12]
-INFO: [Synth 8-256] done synthesizing module 'oled_driver' (0#1) [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'oled_driver' (0#1) [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/oled_driver.vhd:58]
 INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/top.vhd:20]
 INFO: [Synth 8-256] done synthesizing module 'system_top_0_0' (0#1) [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/ip/system_top_0_0/synth/system_top_0_0.vhd:71]
+WARNING: [Synth 8-6014] Unused sequential element byte_cnt_reg was removed.  [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/top.vhd:92]
+WARNING: [Synth 8-6014] Unused sequential element ok_cnt_reg was removed.  [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/sources_1/new/top.vhd:96]
 INFO: [Synth 8-7129] Port addr[10] in module ascii_rom is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1524.883 ; gain = 682.406
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1822.051 ; gain = 983.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1524.883 ; gain = 682.406
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1822.051 ; gain = 983.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1524.883 ; gain = 682.406
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1822.051 ; gain = 983.625
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1524.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 1822.051 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1585.004 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1822.051 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1585.004 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 1822.051 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1585.004 ; gain = 742.527
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1822.051 ; gain = 983.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1585.004 ; gain = 742.527
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1822.051 ; gain = 983.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1585.004 ; gain = 742.527
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1822.051 ; gain = 983.625
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
@@ -189,14 +190,14 @@ INFO: [Synth 8-3354] encoded FSM with state register 'pstate_reg' using encoding
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    idle |                               00 |                               00
-               receiving |                               01 |                               01
-              processing |                               10 |                               10
-                 sending |                               11 |                               11
+                 wait_h1 |                             0001 |                               00
+                 wait_h2 |                             0010 |                               01
+                 payload |                             0100 |                               10
+              processing |                             1000 |                               11
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'top'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'top'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1585.004 ; gain = 742.527
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1822.051 ; gain = 983.625
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -204,54 +205,55 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 51    
 	   2 Input   18 Bit       Adders := 1     
-	   2 Input   16 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 30    
+	   2 Input   16 Bit       Adders := 32    
+	   2 Input   15 Bit       Adders := 30    
 	   2 Input   10 Bit       Adders := 2     
-	   2 Input    8 Bit       Adders := 3     
-	   2 Input    7 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 4     
+	   2 Input    5 Bit       Adders := 1     
 	   2 Input    4 Bit       Adders := 2     
 	   2 Input    3 Bit       Adders := 4     
 +---Registers : 
-	               32 Bit    Registers := 1     
+	              196 Bit    Registers := 1     
+	               32 Bit    Registers := 53    
 	               18 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
+	               16 Bit    Registers := 32    
+	               15 Bit    Registers := 32    
 	               10 Bit    Registers := 2     
-	                8 Bit    Registers := 6     
-	                7 Bit    Registers := 1     
-	                5 Bit    Registers := 3     
+	                8 Bit    Registers := 67    
+	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 4     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 10    
+	                1 Bit    Registers := 9     
 +---RAMs : 
-	              800 Bit	(100 X 8 bit)          RAMs := 2     
-	              512 Bit	(32 X 16 bit)          RAMs := 1     
-	              416 Bit	(26 X 16 bit)          RAMs := 1     
+	               1K Bit	(196 X 8 bit)          RAMs := 1     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 2     
-	   6 Input   32 Bit        Muxes := 1     
+	   6 Input  196 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 27    
 	   2 Input   18 Bit        Muxes := 2     
-	   6 Input   16 Bit        Muxes := 1     
+	   6 Input   16 Bit        Muxes := 32    
+	   2 Input   15 Bit        Muxes := 32    
 	   4 Input   10 Bit        Muxes := 2     
-	   4 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 2     
 	   2 Input    8 Bit        Muxes := 5     
 	   6 Input    8 Bit        Muxes := 2     
 	  22 Input    8 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 1     
 	  22 Input    7 Bit        Muxes := 1     
-	   4 Input    7 Bit        Muxes := 2     
 	   6 Input    5 Bit        Muxes := 1     
 	  22 Input    5 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 4     
-	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 1     
 	   4 Input    3 Bit        Muxes := 2     
 	   6 Input    3 Bit        Muxes := 2     
 	   2 Input    3 Bit        Muxes := 2     
-	   4 Input    2 Bit        Muxes := 3     
-	   2 Input    2 Bit        Muxes := 3     
-	   2 Input    1 Bit        Muxes := 32    
-	   4 Input    1 Bit        Muxes := 19    
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 30    
+	   4 Input    1 Bit        Muxes := 14    
 	   6 Input    1 Bit        Muxes := 11    
 	   3 Input    1 Bit        Muxes := 2     
 	  22 Input    1 Bit        Muxes := 12    
@@ -271,45 +273,220 @@ No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-DSP Report: Generating DSP p_1_out, operation Mode is: C+A*B.
-DSP Report: operator p_1_out is absorbed into DSP p_1_out.
-DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP acc_output[0]1, operation Mode is: A*B.
+DSP Report: operator acc_output[0]1 is absorbed into DSP acc_output[0]1.
+DSP Report: Generating DSP acc_output[1]1, operation Mode is: A*B.
+DSP Report: operator acc_output[1]1 is absorbed into DSP acc_output[1]1.
+DSP Report: Generating DSP acc_output[2]1, operation Mode is: A*B.
+DSP Report: operator acc_output[2]1 is absorbed into DSP acc_output[2]1.
+DSP Report: Generating DSP acc_output[3]1, operation Mode is: A*B.
+DSP Report: operator acc_output[3]1 is absorbed into DSP acc_output[3]1.
+DSP Report: Generating DSP acc_output[4]1, operation Mode is: A*B.
+DSP Report: operator acc_output[4]1 is absorbed into DSP acc_output[4]1.
+DSP Report: Generating DSP acc_output[5]1, operation Mode is: A*B.
+DSP Report: operator acc_output[5]1 is absorbed into DSP acc_output[5]1.
+DSP Report: Generating DSP acc_output[6]1, operation Mode is: A*B.
+DSP Report: operator acc_output[6]1 is absorbed into DSP acc_output[6]1.
+DSP Report: Generating DSP acc_output[7]1, operation Mode is: A*B.
+DSP Report: operator acc_output[7]1 is absorbed into DSP acc_output[7]1.
+DSP Report: Generating DSP acc_output[8]1, operation Mode is: A*B.
+DSP Report: operator acc_output[8]1 is absorbed into DSP acc_output[8]1.
+DSP Report: Generating DSP acc_output[9]1, operation Mode is: A*B.
+DSP Report: operator acc_output[9]1 is absorbed into DSP acc_output[9]1.
+DSP Report: Generating DSP acc_output[10]1, operation Mode is: A*B.
+DSP Report: operator acc_output[10]1 is absorbed into DSP acc_output[10]1.
+DSP Report: Generating DSP acc_output[11]1, operation Mode is: A*B.
+DSP Report: operator acc_output[11]1 is absorbed into DSP acc_output[11]1.
+DSP Report: Generating DSP acc_output[12]1, operation Mode is: A*B.
+DSP Report: operator acc_output[12]1 is absorbed into DSP acc_output[12]1.
+DSP Report: Generating DSP acc_output[13]1, operation Mode is: A*B.
+DSP Report: operator acc_output[13]1 is absorbed into DSP acc_output[13]1.
+DSP Report: Generating DSP acc_output[14]1, operation Mode is: A*B.
+DSP Report: operator acc_output[14]1 is absorbed into DSP acc_output[14]1.
+DSP Report: Generating DSP acc_output[15]1, operation Mode is: A*B.
+DSP Report: operator acc_output[15]1 is absorbed into DSP acc_output[15]1.
+DSP Report: Generating DSP acc_output[16]1, operation Mode is: A*B.
+DSP Report: operator acc_output[16]1 is absorbed into DSP acc_output[16]1.
+DSP Report: Generating DSP acc_output[17]1, operation Mode is: A*B.
+DSP Report: operator acc_output[17]1 is absorbed into DSP acc_output[17]1.
+DSP Report: Generating DSP acc_output[18]1, operation Mode is: A*B.
+DSP Report: operator acc_output[18]1 is absorbed into DSP acc_output[18]1.
+DSP Report: Generating DSP acc_output[19]1, operation Mode is: A*B.
+DSP Report: operator acc_output[19]1 is absorbed into DSP acc_output[19]1.
+DSP Report: Generating DSP acc_output[20]1, operation Mode is: A*B.
+DSP Report: operator acc_output[20]1 is absorbed into DSP acc_output[20]1.
+DSP Report: Generating DSP acc_output[21]1, operation Mode is: A*B.
+DSP Report: operator acc_output[21]1 is absorbed into DSP acc_output[21]1.
+DSP Report: Generating DSP acc_output[22]1, operation Mode is: A*B.
+DSP Report: operator acc_output[22]1 is absorbed into DSP acc_output[22]1.
+DSP Report: Generating DSP acc_output[23]1, operation Mode is: A*B.
+DSP Report: operator acc_output[23]1 is absorbed into DSP acc_output[23]1.
+DSP Report: Generating DSP acc_output[24]1, operation Mode is: A*B.
+DSP Report: operator acc_output[24]1 is absorbed into DSP acc_output[24]1.
+DSP Report: Generating DSP acc_output[25]1, operation Mode is: A*B.
+DSP Report: operator acc_output[25]1 is absorbed into DSP acc_output[25]1.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:21 ; elapsed = 00:02:29 . Memory (MB): peak = 1777.395 ; gain = 934.918
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:26 ; elapsed = 00:01:31 . Memory (MB): peak = 1822.051 ; gain = 983.625
 ---------------------------------------------------------------------------------
- Sort Area is  p_1_out_0 : 0 0 : 921 921 : Used 1 time 0
+ Sort Area is  acc_output[0]1_1a : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[10]1_10 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[11]1_f : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[12]1_e : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[13]1_d : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[14]1_c : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[15]1_b : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[16]1_a : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[17]1_9 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[18]1_8 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[19]1_7 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[1]1_19 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[20]1_6 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[21]1_5 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[22]1_4 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[23]1_3 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[24]1_2 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[25]1_0 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[2]1_18 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[3]1_17 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[4]1_16 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[5]1_15 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[6]1_14 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[7]1_13 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[8]1_12 : 0 0 : 817 817 : Used 1 time 0
+ Sort Area is  acc_output[9]1_11 : 0 0 : 817 817 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 ROM: Preliminary Mapping Report
-+------------+----------------------------+---------------+----------------+
-|Module Name | RTL Object                 | Depth x Width | Implemented As | 
-+------------+----------------------------+---------------+----------------+
-|mlp         | B2[0]                      | 32x7          | LUT            | 
-|mlp         | W1[0]                      | 4096x8        | LUT            | 
-|mlp         | B1[0]                      | 32x7          | LUT            | 
-|mlp         | W2[0]                      | 1024x8        | LUT            | 
-|ascii_rom   | rom_data[0]                | 1024x8        | LUT            | 
-|oled_driver | char_code                  | 32x7          | LUT            | 
-|mlp         | B2[0]                      | 32x7          | LUT            | 
-|mlp         | B1[0]                      | 32x7          | LUT            | 
-|mlp         | W2[0]                      | 1024x8        | LUT            | 
-|mlp         | W1[0]                      | 4096x8        | LUT            | 
-|oled_driver | char_code                  | 32x7          | LUT            | 
-|oled_driver | ascii_rom_inst/rom_data[0] | 1024x8        | LUT            | 
-+------------+----------------------------+---------------+----------------+
++---------------+-----------------------------------------+---------------+----------------+
+|Module Name    | RTL Object                              | Depth x Width | Implemented As | 
++---------------+-----------------------------------------+---------------+----------------+
+|mlp            | acc_hidden[0]1                          | 256x8         | LUT            | 
+|mlp            | acc_hidden[1]1                          | 256x7         | LUT            | 
+|mlp            | acc_hidden[2]1                          | 256x7         | LUT            | 
+|mlp            | acc_hidden[3]1                          | 256x8         | LUT            | 
+|mlp            | acc_hidden[4]1                          | 256x7         | LUT            | 
+|mlp            | acc_hidden[5]1                          | 256x8         | LUT            | 
+|mlp            | acc_hidden[6]1                          | 256x8         | LUT            | 
+|mlp            | acc_hidden[7]1                          | 256x8         | LUT            | 
+|mlp            | acc_hidden[8]1                          | 256x8         | LUT            | 
+|mlp            | acc_hidden[9]1                          | 256x7         | LUT            | 
+|mlp            | acc_hidden[10]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[11]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[12]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[13]1                         | 256x7         | LUT            | 
+|mlp            | acc_hidden[14]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[15]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[16]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[17]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[18]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[19]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[20]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[21]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[22]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[23]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[24]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[25]1                         | 256x7         | LUT            | 
+|mlp            | acc_hidden[26]1                         | 256x7         | LUT            | 
+|mlp            | acc_hidden[27]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[28]1                         | 256x7         | LUT            | 
+|mlp            | acc_hidden[29]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[30]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[31]1                         | 256x7         | LUT            | 
+|mlp            | acc_output[0]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[1]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[2]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[3]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[4]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[5]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[6]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[7]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[8]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[9]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[10]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[11]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[12]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[13]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[14]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[15]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[16]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[17]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[18]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[19]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[20]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[21]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[22]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[23]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[24]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[25]2                         | 256x8         | LUT            | 
+|ascii_rom      | rom_data[0]                             | 1024x8        | LUT            | 
+|oled_driver    | char_code                               | 32x7          | LUT            | 
+|mlp            | acc_hidden[0]1                          | 256x8         | LUT            | 
+|mlp            | acc_hidden[1]1                          | 256x7         | LUT            | 
+|mlp            | acc_hidden[2]1                          | 256x7         | LUT            | 
+|mlp            | acc_hidden[3]1                          | 256x8         | LUT            | 
+|mlp            | acc_hidden[4]1                          | 256x7         | LUT            | 
+|mlp            | acc_hidden[5]1                          | 256x8         | LUT            | 
+|mlp            | acc_hidden[6]1                          | 256x8         | LUT            | 
+|mlp            | acc_hidden[7]1                          | 256x8         | LUT            | 
+|mlp            | acc_hidden[8]1                          | 256x8         | LUT            | 
+|mlp            | acc_hidden[9]1                          | 256x7         | LUT            | 
+|mlp            | acc_hidden[10]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[12]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[13]1                         | 256x7         | LUT            | 
+|mlp            | acc_hidden[14]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[15]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[16]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[17]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[18]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[20]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[21]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[22]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[23]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[24]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[25]1                         | 256x7         | LUT            | 
+|mlp            | acc_hidden[26]1                         | 256x7         | LUT            | 
+|mlp            | acc_hidden[27]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[28]1                         | 256x7         | LUT            | 
+|mlp            | acc_hidden[30]1                         | 256x8         | LUT            | 
+|mlp            | acc_hidden[31]1                         | 256x7         | LUT            | 
+|mlp            | acc_output[1]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[2]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[3]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[4]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[5]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[6]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[7]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[8]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[9]2                          | 256x8         | LUT            | 
+|mlp            | acc_output[10]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[11]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[12]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[13]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[14]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[15]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[16]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[17]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[18]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[19]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[20]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[21]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[22]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[23]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[24]2                         | 256x8         | LUT            | 
+|mlp            | acc_output[25]2                         | 256x8         | LUT            | 
+|system_top_0_0 | U0/oled_inst/char_code                  | 32x7          | LUT            | 
+|system_top_0_0 | U0/oled_inst/ascii_rom_inst/rom_data[0] | 1024x8        | LUT            | 
++---------------+-----------------------------------------+---------------+----------------+
 
 
 Distributed RAM: Preliminary Mapping Report (see note below)
-+---------------+----------------+-----------+----------------------+----------------+
-|Module Name    | RTL Object     | Inference | Size (Depth x Width) | Primitives     | 
-+---------------+----------------+-----------+----------------------+----------------+
-|\U0/mlp_inst   | hidden_buf_reg | Implied   | 32 x 16              | RAM32M x 3     | 
-|\U0/mlp_inst   | input_buf_reg  | Implied   | 128 x 8              | RAM64X1S x 16  | 
-|\U0/mlp_inst   | output_buf_reg | Implied   | 32 x 16              | RAM32X1S x 16  | 
-|system_top_0_0 | U0/bram_reg    | Implied   | 128 x 8              | RAM64M x 6     | 
-+---------------+----------------+-----------+----------------------+----------------+
++---------------+-------------+-----------+----------------------+--------------+
+|Module Name    | RTL Object  | Inference | Size (Depth x Width) | Primitives   | 
++---------------+-------------+-----------+----------------------+--------------+
+|system_top_0_0 | U0/bram_reg | Implied   | 256 x 8              | RAM64M x 12  | 
++---------------+-------------+-----------+----------------------+--------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 
@@ -317,7 +494,32 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|mlp         | C+A*B       | 16     | 8      | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -329,21 +531,18 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:21 ; elapsed = 00:02:30 . Memory (MB): peak = 1777.395 ; gain = 934.918
+Finished Timing Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:01:33 . Memory (MB): peak = 1822.051 ; gain = 983.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping Report
-+---------------+----------------+-----------+----------------------+----------------+
-|Module Name    | RTL Object     | Inference | Size (Depth x Width) | Primitives     | 
-+---------------+----------------+-----------+----------------------+----------------+
-|\U0/mlp_inst   | hidden_buf_reg | Implied   | 32 x 16              | RAM32M x 3     | 
-|\U0/mlp_inst   | input_buf_reg  | Implied   | 128 x 8              | RAM64X1S x 16  | 
-|\U0/mlp_inst   | output_buf_reg | Implied   | 32 x 16              | RAM32X1S x 16  | 
-|system_top_0_0 | U0/bram_reg    | Implied   | 128 x 8              | RAM64M x 6     | 
-+---------------+----------------+-----------+----------------------+----------------+
++---------------+-------------+-----------+----------------------+--------------+
+|Module Name    | RTL Object  | Inference | Size (Depth x Width) | Primitives   | 
++---------------+-------------+-----------+----------------------+--------------+
+|system_top_0_0 | U0/bram_reg | Implied   | 256 x 8              | RAM64M x 12  | 
++---------------+-------------+-----------+----------------------+--------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -352,7 +551,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:22 ; elapsed = 00:02:30 . Memory (MB): peak = 1777.402 ; gain = 934.926
+Finished Technology Mapping : Time (s): cpu = 00:01:30 ; elapsed = 00:01:35 . Memory (MB): peak = 1822.051 ; gain = 983.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -370,37 +569,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:26 ; elapsed = 00:02:34 . Memory (MB): peak = 1813.324 ; gain = 970.848
+Finished IO Insertion : Time (s): cpu = 00:01:34 ; elapsed = 00:01:39 . Memory (MB): peak = 1898.555 ; gain = 1060.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:26 ; elapsed = 00:02:34 . Memory (MB): peak = 1813.324 ; gain = 970.848
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:34 ; elapsed = 00:01:39 . Memory (MB): peak = 1898.555 ; gain = 1060.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:26 ; elapsed = 00:02:34 . Memory (MB): peak = 1813.324 ; gain = 970.848
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:35 ; elapsed = 00:01:40 . Memory (MB): peak = 1898.555 ; gain = 1060.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:26 ; elapsed = 00:02:34 . Memory (MB): peak = 1813.324 ; gain = 970.848
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:35 ; elapsed = 00:01:40 . Memory (MB): peak = 1898.555 ; gain = 1060.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:26 ; elapsed = 00:02:34 . Memory (MB): peak = 1813.324 ; gain = 970.848
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:35 ; elapsed = 00:01:40 . Memory (MB): peak = 1898.555 ; gain = 1060.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:26 ; elapsed = 00:02:34 . Memory (MB): peak = 1813.324 ; gain = 970.848
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:35 ; elapsed = 00:01:40 . Memory (MB): peak = 1898.555 ; gain = 1060.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -410,7 +609,32 @@ DSP Final Report (the ' indicates corresponding REG is set)
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|mlp         | C+A*B       | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mlp         | A*B         | 15     | 18     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
@@ -421,54 +645,49 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |CARRY4   |    46|
-|2     |DSP48E1  |     1|
-|3     |LUT1     |     1|
-|4     |LUT2     |   138|
-|5     |LUT3     |    91|
-|6     |LUT4     |   151|
-|7     |LUT5     |    97|
-|8     |LUT6     |   782|
-|9     |MUXF7    |   280|
-|10    |MUXF8    |   106|
-|11    |RAM32M   |     3|
-|12    |RAM32X1S |    16|
-|13    |RAM64M   |     6|
-|14    |RAM64X1S |    16|
-|15    |FDCE     |   178|
-|16    |FDPE     |    13|
-|17    |FDRE     |    41|
-+------+---------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   786|
+|2     |DSP48E1 |    26|
+|3     |LUT1    |   721|
+|4     |LUT2    |  2994|
+|5     |LUT3    |    71|
+|6     |LUT4    |   303|
+|7     |LUT5    |   170|
+|8     |LUT6    |  2557|
+|9     |MUXF7   |   750|
+|10    |MUXF8   |   206|
+|11    |RAM64M  |    12|
+|12    |FDCE    |  3482|
+|13    |FDPE    |    14|
+|14    |FDRE    |    31|
++------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:26 ; elapsed = 00:02:34 . Memory (MB): peak = 1813.324 ; gain = 970.848
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:35 ; elapsed = 00:01:40 . Memory (MB): peak = 1898.555 ; gain = 1060.129
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:17 ; elapsed = 00:02:32 . Memory (MB): peak = 1813.324 ; gain = 910.727
-Synthesis Optimization Complete : Time (s): cpu = 00:02:26 ; elapsed = 00:02:34 . Memory (MB): peak = 1813.324 ; gain = 970.848
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:19 ; elapsed = 00:01:37 . Memory (MB): peak = 1898.555 ; gain = 1060.129
+Synthesis Optimization Complete : Time (s): cpu = 00:01:35 ; elapsed = 00:01:40 . Memory (MB): peak = 1898.555 ; gain = 1060.129
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1825.371 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 474 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 1916.367 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1780 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'system_top_0_0' is not ideal for floorplanning, since the cellview 'mlp' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1926.723 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2019.414 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 41 instances were transformed.
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 3 instances
-  RAM32X1S => RAM32X1S (RAMS32): 16 instances
-  RAM64M => RAM64M (RAMD64E(x4)): 6 instances
-  RAM64X1S => RAM64X1S (RAMS64E): 16 instances
+  A total of 12 instances were transformed.
+  RAM64M => RAM64M (RAMD64E(x4)): 12 instances
 
-Synth Design complete | Checksum: 5092d52a
+Synth Design complete | Checksum: d2440886
 INFO: [Common 17-83] Releasing license: Synthesis
-60 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+60 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:30 ; elapsed = 00:02:41 . Memory (MB): peak = 1926.723 ; gain = 1310.691
+synth_design: Time (s): cpu = 00:01:41 ; elapsed = 00:01:49 . Memory (MB): peak = 2019.414 ; gain = 1403.918
 INFO: [Coretcl 2-1174] Renamed 10 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1926.723 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2019.414 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/system_top_0_0_synth_1/system_top_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file system_top_0_0_utilization_synth.rpt -pb system_top_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Oct  5 19:07:27 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 14 17:43:25 2026...

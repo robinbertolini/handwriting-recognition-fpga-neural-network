@@ -175,7 +175,7 @@ processing_system7_v5_5_tlm :: processing_system7_v5_5_tlm (sc_core::sc_module_n
         ,PS_SRSTB("PS_SRSTB")
         ,PS_CLK("PS_CLK")
         ,PS_PORB("PS_PORB")
-        ,FCLK_CLK0_clk("FCLK_CLK0_clk", sc_time(10000.0,sc_core::SC_PS))//clock period in picoseconds = 1000000/freq(in MZ)
+        ,FCLK_CLK0_clk("FCLK_CLK0_clk", sc_time(40000.0,sc_core::SC_PS))//clock period in picoseconds = 1000000/freq(in MZ)
     ,prop(_prop)
     {
         //creating instances of xtlm slave sockets

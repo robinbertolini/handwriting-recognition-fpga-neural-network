@@ -67,8 +67,8 @@ begin
         reset <= '0';
         wait for 100 ns;
 
-        for i in 0 to 99 loop
-            if i = 50 then
+        for i in 0 to 195 loop
+            if i = 98 then
                 send_byte(uart_rx, x"FF");
             else
                 send_byte(uart_rx, x"00");

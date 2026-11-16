@@ -6,13 +6,13 @@
 # Block Designs: bd/system/system.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system || ORIG_REF_NAME==system} -quiet] -quiet
 
-# IP: bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_processing_system7_0_0 || ORIG_REF_NAME==system_processing_system7_0_0} -quiet] -quiet
-
 # IP: bd/system/ip/system_top_0_0/system_top_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_top_0_0 || ORIG_REF_NAME==system_top_0_0} -quiet] -quiet
 
 # IP: bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_proc_sys_reset_0_0 || ORIG_REF_NAME==system_proc_sys_reset_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_processing_system7_0_0 || ORIG_REF_NAME==system_processing_system7_0_0} -quiet] -quiet
 
 # XDC: c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/system_ooc.xdc

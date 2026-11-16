@@ -8,12 +8,12 @@
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Mon Oct  5 19:07:30 2026
+  **** Start of session at: Mon Oct 26 14:29:38 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source system_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 596.473 ; gain = 220.773
+create_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 595.887 ; gain = 219.148
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
@@ -29,34 +29,34 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 33308
+INFO: [Synth 8-7075] Helper process launched with PID 34004
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1392.102 ; gain = 541.645
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1388.066 ; gain = 541.152
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'system_wrapper' [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/hdl/system_wrapper.vhd:47]
-INFO: [Synth 8-3491] module 'system' declared at 'c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/synth/system.vhd:15' bound to instance 'system_i' of component 'system' [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/hdl/system_wrapper.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'system_wrapper' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/hdl/system_wrapper.vhd:47]
+INFO: [Synth 8-3491] module 'system' declared at 'c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/synth/system.vhd:15' bound to instance 'system_i' of component 'system' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/hdl/system_wrapper.vhd:80]
 INFO: [Synth 8-638] synthesizing module 'system' [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/synth/system.vhd:51]
-INFO: [Synth 8-3491] module 'system_proc_sys_reset_0_0' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/.Xil/Vivado-19292-PcBobin/realtime/system_proc_sys_reset_0_0_stub.vhdl:6' bound to instance 'proc_sys_reset_0' of component 'system_proc_sys_reset_0_0' [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/synth/system.vhd:158]
-INFO: [Synth 8-638] synthesizing module 'system_proc_sys_reset_0_0' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/.Xil/Vivado-19292-PcBobin/realtime/system_proc_sys_reset_0_0_stub.vhdl:28]
-INFO: [Synth 8-3491] module 'system_processing_system7_0_0' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/.Xil/Vivado-19292-PcBobin/realtime/system_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'system_processing_system7_0_0' [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/synth/system.vhd:171]
-INFO: [Synth 8-638] synthesizing module 'system_processing_system7_0_0' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/.Xil/Vivado-19292-PcBobin/realtime/system_processing_system7_0_0_stub.vhdl:49]
-INFO: [Synth 8-3491] module 'system_top_0_0' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/.Xil/Vivado-19292-PcBobin/realtime/system_top_0_0_stub.vhdl:6' bound to instance 'top_0' of component 'system_top_0_0' [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/synth/system.vhd:205]
-INFO: [Synth 8-638] synthesizing module 'system_top_0_0' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/.Xil/Vivado-19292-PcBobin/realtime/system_top_0_0_stub.vhdl:30]
+INFO: [Synth 8-3491] module 'system_proc_sys_reset_0_0' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/.Xil/Vivado-14536-PcBobin/realtime/system_proc_sys_reset_0_0_stub.vhdl:6' bound to instance 'proc_sys_reset_0' of component 'system_proc_sys_reset_0_0' [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/synth/system.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'system_proc_sys_reset_0_0' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/.Xil/Vivado-14536-PcBobin/realtime/system_proc_sys_reset_0_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'system_processing_system7_0_0' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/.Xil/Vivado-14536-PcBobin/realtime/system_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'system_processing_system7_0_0' [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/synth/system.vhd:171]
+INFO: [Synth 8-638] synthesizing module 'system_processing_system7_0_0' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/.Xil/Vivado-14536-PcBobin/realtime/system_processing_system7_0_0_stub.vhdl:49]
+INFO: [Synth 8-3491] module 'system_top_0_0' declared at 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/.Xil/Vivado-14536-PcBobin/realtime/system_top_0_0_stub.vhdl:6' bound to instance 'top_0' of component 'system_top_0_0' [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/synth/system.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'system_top_0_0' [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/.Xil/Vivado-14536-PcBobin/realtime/system_top_0_0_stub.vhdl:30]
 INFO: [Synth 8-256] done synthesizing module 'system' (0#1) [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/synth/system.vhd:51]
-INFO: [Synth 8-256] done synthesizing module 'system_wrapper' (0#1) [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/hdl/system_wrapper.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'system_wrapper' (0#1) [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/hdl/system_wrapper.vhd:47]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1511.484 ; gain = 661.027
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1507.902 ; gain = 660.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1511.484 ; gain = 661.027
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1507.902 ; gain = 660.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1511.484 ; gain = 661.027
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1507.902 ; gain = 660.988
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1511.484 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1507.902 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -68,6 +68,10 @@ Finished Parsing XDC File [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOG
 Parsing XDC File [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0/system_processing_system7_0_0_in_context.xdc] for cell 'system_i/processing_system7_0'
 Finished Parsing XDC File [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0/system_processing_system7_0_0_in_context.xdc] for cell 'system_i/processing_system7_0'
 Parsing XDC File [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/constrs_1/new/zedboard.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_fpga_0' completely overrides clock 'system_i/processing_system7_0/FCLK_CLK0'.
+New: create_clock -period 10.000 -name clk_fpga_0 [get_pins -hierarchical -filter {NAME =~ */FCLK_CLK0}], [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/constrs_1/new/zedboard.xdc:2]
+Previous: create_clock -period 40.000 [get_pins system_i/processing_system7_0/FCLK_CLK0], [c:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0/system_processing_system7_0_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 Finished Parsing XDC File [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/constrs_1/new/zedboard.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.srcs/constrs_1/new/zedboard.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
@@ -75,31 +79,32 @@ Parsing XDC File [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LET
 Finished Parsing XDC File [C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1511.484 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1507.902 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1511.484 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1507.902 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '40.000' specified during out-of-context synthesis of instance 'system_i/proc_sys_reset_0' at clock pin 'slowest_sync_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1511.484 ; gain = 661.027
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1507.902 ; gain = 660.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1511.484 ; gain = 661.027
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1507.902 ; gain = 660.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1511.484 ; gain = 661.027
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 1507.902 ; gain = 660.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1511.484 ; gain = 661.027
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 1507.902 ; gain = 660.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -121,25 +126,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1529.219 ; gain = 678.762
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1520.027 ; gain = 673.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1699.691 ; gain = 849.234
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:01 . Memory (MB): peak = 1695.910 ; gain = 848.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1699.691 ; gain = 849.234
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:01 . Memory (MB): peak = 1696.172 ; gain = 849.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1709.383 ; gain = 858.926
+Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:01 . Memory (MB): peak = 1705.738 ; gain = 858.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -157,37 +162,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1958.840 ; gain = 1108.383
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:10 . Memory (MB): peak = 1954.824 ; gain = 1107.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1958.840 ; gain = 1108.383
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:10 . Memory (MB): peak = 1954.824 ; gain = 1107.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1958.840 ; gain = 1108.383
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:10 . Memory (MB): peak = 1954.824 ; gain = 1107.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1958.840 ; gain = 1108.383
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:10 . Memory (MB): peak = 1954.824 ; gain = 1107.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1958.840 ; gain = 1108.383
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:10 . Memory (MB): peak = 1954.824 ; gain = 1107.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1958.840 ; gain = 1108.383
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:10 . Memory (MB): peak = 1954.824 ; gain = 1107.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -212,25 +217,26 @@ Report Cell Usage:
 |4     |OBUF                               |     6|
 +------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1958.840 ; gain = 1108.383
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:10 . Memory (MB): peak = 1954.824 ; gain = 1107.910
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1958.840 ; gain = 1108.383
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1958.840 ; gain = 1108.383
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 1954.824 ; gain = 1107.910
+Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:10 . Memory (MB): peak = 1954.824 ; gain = 1107.910
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1963.188 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1959.055 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1964.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1960.703 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete | Checksum: 43cc24d3
 INFO: [Common 17-83] Releasing license: Synthesis
-33 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+33 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 1964.832 ; gain = 1348.855
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1964.832 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:13 ; elapsed = 00:01:26 . Memory (MB): peak = 1960.703 ; gain = 1344.832
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1960.703 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/robin/Documents/GitHub/ALD300926/LETTERRECOGNIZER/LETTERRECOGNIZER.runs/synth_1/system_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Oct  5 19:08:21 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 26 14:31:29 2026...
