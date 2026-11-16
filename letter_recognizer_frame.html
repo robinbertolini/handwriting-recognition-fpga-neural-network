@@ -126,6 +126,117 @@
             max-height: 200px;
             overflow: auto;
         }
+
+        /* OLED DECODER */
+        .oled-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9fc;
+            border-radius: 15px;
+            border: 2px solid #e0e4f0;
+        }
+        .oled-section h3 {
+            color: #4a54a3;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .oled-input-row {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        #oled-input {
+            font-family: 'Consolas', monospace;
+            font-size: 20px;
+            padding: 10px 15px;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            width: 220px;
+            text-align: center;
+        }
+        #oled-input:focus { outline: none; border-color: #764ba2; }
+        .oled-hint { color: #888; font-size: 13px; }
+        .oled-fields {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+        .oled-field {
+            background: white;
+            padding: 12px 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .oled-field-label {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .oled-field-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            font-family: 'Consolas', monospace;
+        }
+        .oled-field-value.match { color: #27ae60; }
+        .oled-field-value.mismatch { color: #c0392b; }
+        .oled-bits {
+            font-family: 'Consolas', monospace;
+            font-size: 11px;
+            color: #999;
+            margin-top: 4px;
+            word-break: break-all;
+        }
+
+        /* LETTER MAP */
+        .letter-map-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9fc;
+            border-radius: 15px;
+            border: 2px solid #e0e4f0;
+        }
+        .letter-map-section h3 {
+            color: #4a54a3;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .letter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+            gap: 8px;
+        }
+        .letter-cell {
+            background: white;
+            border-radius: 8px;
+            padding: 8px 4px;
+            text-align: center;
+            border: 1px solid #e0e4f0;
+            transition: all 0.15s;
+        }
+        .letter-cell:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(102,126,234,0.15);
+        }
+        .letter-cell .code {
+            font-family: 'Consolas', monospace;
+            font-size: 11px;
+            color: #888;
+        }
+        .letter-cell .glyph {
+            font-size: 22px;
+            font-weight: 700;
+            color: #4a54a3;
+            line-height: 1;
+            margin-top: 2px;
+        }
     </style>
 </head>
 <body>
@@ -157,6 +268,47 @@
     </div>
 
     <div id="status">Pronto. Disegna una lettera per iniziare.</div>
+
+    <!-- ============================================ -->
+    <!-- OLED DECODER -->
+    <!-- ============================================ -->
+    <div class="oled-section">
+        <h3>🔢 Decodifica Output OLED</h3>
+        <div class="oled-input-row">
+            <input type="text" id="oled-input" maxlength="8" placeholder="018E2710" autocomplete="off">
+            <span class="oled-hint">Incolla le 8 cifre esadecimali mostrate sull'OLED</span>
+        </div>
+        <div class="oled-fields" id="oled-fields">
+            <div class="oled-field">
+                <div class="oled-field-label">rx_tot (byte totali)</div>
+                <div class="oled-field-value" id="oled-rxtot">—</div>
+                <div class="oled-bits" id="oled-rxtot-bits"></div>
+            </div>
+            <div class="oled-field">
+                <div class="oled-field-label">last_byte (pixel attivi)</div>
+                <div class="oled-field-value" id="oled-lastbyte">—</div>
+                <div class="oled-bits" id="oled-lastbyte-bits"></div>
+            </div>
+            <div class="oled-field">
+                <div class="oled-field-label">mlp_result</div>
+                <div class="oled-field-value" id="oled-result">—</div>
+                <div class="oled-bits" id="oled-result-bits"></div>
+            </div>
+            <div class="oled-field">
+                <div class="oled-field-label">Lettera riconosciuta</div>
+                <div class="oled-field-value" id="oled-letter">—</div>
+                <div class="oled-bits" id="oled-letter-note"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- LETTER MAP -->
+    <!-- ============================================ -->
+    <div class="letter-map-section">
+        <h3>🔤 Mappa Codice → Lettera (0x00 = A … 0x19 = Z)</h3>
+        <div class="letter-grid" id="letter-grid"></div>
+    </div>
 
     <!-- ============================================ -->
     <!-- BOX DEBUG: mostra cosa viene elaborato -->
@@ -252,6 +404,10 @@ function canvasToInput() {
     const tmpCtx = tmpCanvas.getContext('2d');
     tmpCtx.fillStyle = '#ffffff';
     tmpCtx.fillRect(0, 0, INPUT_SIZE, INPUT_SIZE);
+
+    // FIX: disabilita interpolazione bilineare -> resize nearest-neighbor deterministico
+    tmpCtx.imageSmoothingEnabled = false;
+
     tmpCtx.drawImage(canvas, squareX, squareY, size, size, 0, 0, INPUT_SIZE, INPUT_SIZE);
 
     const imageData = tmpCtx.getImageData(0, 0, INPUT_SIZE, INPUT_SIZE);
@@ -293,7 +449,6 @@ function showGridInDebug(pixels, label = '') {
         Primi 14 byte: <code>${bytes.slice(0, 14).join(',')}</code>
     `;
 
-    // Log testuale
     let logText = `Griglia 14x14 (${ones} pixel attivi, ${nonZeroNonOne} byte anomali):\n`;
     logText += gridStr;
     logText += `\nPrimi 20 byte: ${bytes.slice(0, 20).join(',')}\n`;
@@ -367,7 +522,6 @@ document.getElementById('save-btn').addEventListener('click', () => {
     const thumbnail = thumbCanvas.toDataURL('image/png');
     letterQueue.push({ imageData: cnnPixels, thumbnail });
 
-    // Mostra la griglia nel box debug
     showGridInDebug(cnnPixels, `LETTERA ${letterQueue.length} SALVATA`);
 
     updateQueueDisplay();
@@ -425,6 +579,83 @@ document.getElementById('send-btn').addEventListener('click', async () => {
         setStatus('Errore: ' + error.message, 'error');
     }
 });
+
+// ============================================================
+// OLED DECODER
+// Formato: rx_tot(16 bit) | last_byte(8 bit) | "000"(3) + mlp_result(5)
+// Visualizzato come 8 cifre esadecimali: RRRR LL MM
+//   RRRR = rx_tot
+//   LL   = last_byte (numero pixel attivi)
+//   MM   = mlp_result (0x00..0x19, cioe' 0..25)
+// ============================================================
+const oledInput   = document.getElementById('oled-input');
+const oledRxtot   = document.getElementById('oled-rxtot');
+const oledRxtotB  = document.getElementById('oled-rxtot-bits');
+const oledLast    = document.getElementById('oled-lastbyte');
+const oledLastB   = document.getElementById('oled-lastbyte-bits');
+const oledRes     = document.getElementById('oled-result');
+const oledResB    = document.getElementById('oled-result-bits');
+const oledLet     = document.getElementById('oled-letter');
+const oledLetN    = document.getElementById('oled-letter-note');
+
+function decodeOled(str) {
+    str = (str || '').trim().toUpperCase().replace(/[^0-9A-F]/g, '');
+    if (str.length !== 8) {
+        oledRxtot.textContent = '—';
+        oledRxtotB.textContent = '';
+        oledLast.textContent = '—';
+        oledLastB.textContent = '';
+        oledRes.textContent = '—';
+        oledResB.textContent = '';
+        oledLet.textContent = '—';
+        oledLetN.textContent = '';
+        oledLet.className = 'oled-field-value';
+        return;
+    }
+    const rxTot    = parseInt(str.substring(0, 4), 16);
+    const lastByte = parseInt(str.substring(4, 6), 16);
+    const result   = parseInt(str.substring(6, 8), 16);
+
+    oledRxtot.textContent = rxTot;
+    oledRxtotB.textContent = `hex: 0x${str.substring(0,4)}  |  bin: ${rxTot.toString(2).padStart(16, '0')}`;
+
+    oledLast.textContent = lastByte;
+    oledLastB.textContent = `hex: 0x${str.substring(4,6)}  |  bin: ${lastByte.toString(2).padStart(8, '0')}`;
+
+    oledRes.textContent = `0x${result.toString(16).toUpperCase().padStart(2, '0')} = ${result}`;
+    oledResB.textContent = `bin: ${result.toString(2).padStart(8, '0')} (solo i 5 bit bassi sono usati)`;
+
+    if (result >= 0 && result <= 25) {
+        const letter = String.fromCharCode(65 + result);
+        oledLet.textContent = letter;
+        oledLetN.textContent = `codice valido (0..25)`;
+        oledLet.className = 'oled-field-value match';
+    } else {
+        oledLet.textContent = '?';
+        oledLetN.textContent = `codice fuori range (> 25) → valore spurio`;
+        oledLet.className = 'oled-field-value mismatch';
+    }
+}
+
+oledInput.addEventListener('input', (e) => decodeOled(e.target.value));
+oledInput.addEventListener('paste', () => setTimeout(() => decodeOled(oledInput.value), 0));
+
+// ============================================================
+// LETTER MAPPING TABLE (0x00 = A ... 0x19 = Z)
+// ============================================================
+(function buildLetterGrid() {
+    const grid = document.getElementById('letter-grid');
+    for (let i = 0; i < 26; i++) {
+        const cell = document.createElement('div');
+        cell.className = 'letter-cell';
+        const glyph = String.fromCharCode(65 + i);
+        cell.innerHTML = `
+            <div class="code">0x${i.toString(16).toUpperCase().padStart(2, '0')} / ${i}</div>
+            <div class="glyph">${glyph}</div>
+        `;
+        grid.appendChild(cell);
+    }
+})();
 
 updateQueueDisplay();
 </script>
