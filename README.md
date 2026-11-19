@@ -68,7 +68,7 @@ The entire MLP and its control logic are written in **pure VHDL (RTL)** — no H
 | 2–197 | 0x00 / 0x01 | 196 pixel bytes (1 = active) |
 | 198 | — | Checksum (sum of pixels mod 256) |
 
-> ⚠️ **Important:** the current `top.vhd` FSM does **not** validate the checksum byte — after receiving the 196th payload byte it immediately starts the MLP. The checksum is computed by the web app but ignored by the PL. This is fine for the current design; if you extend the parser, remember to update both sides.
+>  **Important:** the current `top.vhd` FSM does **not** validate the checksum byte — after receiving the 196th payload byte it immediately starts the MLP. The checksum is computed by the web app but ignored by the PL. This is fine for the current design; if you extend the parser, remember to update both sides.
 
 ### OLED output (8 hex digits)
 
@@ -120,7 +120,7 @@ The OLED shows 8 hexadecimal digits in this layout:
 
 1. Open Vivado 2025.2 and open the project with all VHDL sources (see [file structure](#project-file-structure)).
 2. **Verify the PL clock frequency** in the Block Design. The report targets **25 MHz**.
-3. ⚠️ **Clock consistency check:** `top.vhd` instantiates `uart_tx` with `CLK_FREQ => 100_000_000`, while `uart_rx.vhd` has a default `CLK_FREQ = 100_000_000`. If your actual PL clock is **25 MHz**, you **must** change these to `25_000_000` — otherwise UART sampling will be off by a factor of 4 and no data will be decoded.
+3.  **Clock consistency check:** `top.vhd` instantiates `uart_tx` with `CLK_FREQ => 100_000_000`, while `uart_rx.vhd` has a default `CLK_FREQ = 100_000_000`. If your actual PL clock is **25 MHz**, you **must** change these to `25_000_000` — otherwise UART sampling will be off by a factor of 4 and no data will be decoded.
 4. In `zedboard.xdc`, keep the constraint at **25 MHz (40 ns period)**. Do **not** override to 100 MHz — the purely combinatorial datapath fails timing there (WNS −1.946 ns).
 5. Run **Synthesis → Implementation → Generate Bitstream**.
 6. **File → Export → Export Hardware → Include bitstream** → save the `.xsa` for Vitis.
@@ -315,29 +315,7 @@ Total on-chip: **1.762 W** — PS dominates at 1.521 W; PL consumes ~0.241 W. Ju
 
 ---
 
-## Project File Structure
 
-```
-.
-├── README.md
-├── vivado/
-│   ├── top.vhd                 # Top-level: UART RX, RAM buffer, MLP, OLED
-│   ├── uart_rx.vhd             # UART receiver (115200 baud)
-│   ├── uart_tx.vhd             # UART transmitter (unused in current design)
-│   ├── mlp.vhd                 # MLP FSM + parallel datapath
-│   ├── mlp_weights.vhd         # Quantized weights/biases (auto-generated)
-│   ├── oled_driver.vhd         # SPI OLED controller (Passerone, 2018)
-│   ├── oled_counter.vhd        # Generic counter with terminal count
-│   ├── spi_controller.vhd      # 8-bit SPI master
-│   ├── delay_module.vhd        # ms-scale delay generator
-│   └── ascii_rom.vhd           # 5×8 ASCII font ROM
-├── vitis/
-│   └── ps_uart_bridge.c        # ARM PS bridge: UART1 → UART0 (EMIO)
-└── webapp/
-    └── letter_recognizer_frame.html  # Single-file web app (Italian UI)
-```
-
----
 
 ## Acknowledgments
 
